@@ -36,7 +36,7 @@ class FixableDropout1d(nn.Module):
     def fix(self):
         self.lazy_load=True
     def activate(self):
-        self.layer_load=False
+        self.lazy_load=False
 
 
 class FixableDropout2d(nn.Module):
@@ -72,7 +72,7 @@ class FixableDropout2d(nn.Module):
     def fix(self):
         self.lazy_load=True
     def activate(self):
-        self.layer_load=False
+        self.lazy_load=False
 
 class FixableDropout3d(nn.Module):
     """
@@ -107,7 +107,7 @@ class FixableDropout3d(nn.Module):
     def fix(self):
         self.lazy_load=True
     def activate(self):
-        self.layer_load=False
+        self.lazy_load=False
 
 if __name__ =="__main__":
     drop= FixableDropout2d(p=0.5, inplace=False)
