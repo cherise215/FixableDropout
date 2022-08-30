@@ -5,8 +5,7 @@ from torch.nn import functional as F
 
 class FixableDropout1d(nn.Module):
     """
-    _summary_method = torch.nn.Dropout2d.__init__
-     based on 1D pytorch mask, supports lazy load with last generated mask.
+     based on 1D pytorch dropout, supporting lazy load with last generated mask.
      To use last generated mask, set lazy_load to True
     """
     def __init__(self, p: float = 0.5,inplace=False,lazy_load: bool = False,training=True):
@@ -41,8 +40,7 @@ class FixableDropout1d(nn.Module):
 
 class FixableDropout2d(nn.Module):
     """
-    _summary_method = torch.nn.Dropout2d.__init__
-     based on 2D pytorch mask, supports lazy load with last generated mask.
+     based on 2D pytorch dropout, supporting lazy load with last generated mask.
      To use last generated mask, set lazy_load to True
     """
     def __init__(self, p: float = 0.5,inplace=False,lazy_load: bool = False,training=True):
@@ -76,8 +74,7 @@ class FixableDropout2d(nn.Module):
 
 class FixableDropout3d(nn.Module):
     """
-    _summary_method = torch.nn.Dropout2d.__init__
-     based on 2D pytorch mask, supports lazy load with last generated mask
+     based on 3D pytorch dropout, supporting lazy load with last generated mask
     """
     def __init__(self, p: float = 0.5,inplace=False,lazy_load: bool = False,training=True):
         super(FixableDropout3d, self).__init__()
